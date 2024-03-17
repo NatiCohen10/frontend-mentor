@@ -6,8 +6,8 @@
     box-sizing: border-box;
 }
 img{
-    /* max-width: 100%; */
-    height: 450px;
+    max-width: 100%;
+    /* height: 450px; */
     display: block;
 }
 html{
@@ -19,39 +19,35 @@ body{
     background-color:hsl(30, 38%, 92%);
     font-size: 14px;
 }
-.wrapper{
+.card{
     border-radius: 8px;
-    width: 575px;
+    width: 560px;
     height: 435px;
-
-
-
     display: flex;
-   /* align-items: center; */
-   /* justify-content: center; */
+    /* flex-wrap: wrap; */
    background-color: white;
    overflow: hidden;
 }
 
-.card{
+.content{
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
     padding: 24px;
     flex:1;
-    /* width: 500px; */
     gap: 4px;
     overflow:auto;
     
   
 }
+
 .img-border{
-    /* width: 50%; */
-    /* height: 100%; */
+    width: 50%;
+    height: 100%;
     flex: 1;
-    height: 450px;
-    
-    
+    display: block;
+}
+.image1{
+    height: 100%;
 }
 p , .small-h{
     font-family: "Montserrat", sans-serif;
@@ -65,7 +61,6 @@ p , .small-h{
     justify-content: center;
     align-items: center;
     height: 100%;
-    
 }
 
 h1{
@@ -120,4 +115,47 @@ h1{
 svg{
     padding-right: 8px;
     width: 25px;
+}
+.image2{
+    display: none;
+}
+@media (max-width:375px){
+    
+    
+    .card{
+        display: flex;
+        flex-direction: column;
+        width: 325px;
+        height: 624px;    
+    }
+    .content{
+        flex-wrap: nowrap;
+        overflow-x: visible;
+        overflow: visible;
+        padding-inline: 16px;
+        padding-bottom: 24px;
+        padding-top: 12px;
+        gap: 0px;   
+          
+    }
+    .content p{
+        line-height: 16pt;
+    }
+    .img-border{
+        width: auto;
+        height: 50%;
+
+    }
+    .image1{
+        display: none;
+
+    }
+    .image2{
+        display: block;
+        height: 268px;
+    }
+    .small-h{
+        padding: 4px;
+    }
+    
 }
